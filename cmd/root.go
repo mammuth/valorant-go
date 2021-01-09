@@ -75,8 +75,6 @@ func init() {
 	rootCmd.PersistentFlags().StringVar(&password, "password", "", "Your riot password")
 	viper.BindPFlag("password", rootCmd.PersistentFlags().Lookup("password"))
 	// rootCmd.MarkFlagRequired("password")
-
-	rootCmd.AddCommand(matchesCmd)
 }
 
 // initConfig reads in config file and ENV variables if set.
