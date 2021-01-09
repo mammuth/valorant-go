@@ -10,12 +10,12 @@ This module includes two packages:
 **Current status:** 
 - The API wrapper is very fundamental and lacks things like proper error handling. :construction:
 - Only feature is displaying the MMR / Elo changes of your latest matches
-- Todo: Create binaries via CLI
+- Todo: Create binaries via CI
 
 ### Usage
-Currently, you have to build the binary yourself. 
+Download binaries of the program here: https://github.com/mammuth/valorant-go/releases/
 
-After this, run `valorant-go matches --region eu --username <your-name> --password <your-password>` to get your match history
+After this, run `valorant.exe matches --region eu --username <your-name> --password <your-password>` to get your match history
 
 You can create a config file at `$HOME/.valorant-go.yaml` like this:
 ```yaml
