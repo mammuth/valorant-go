@@ -42,6 +42,7 @@ to quickly create a Cobra application.`,
 		client, _ := api.NewClient(region.(string), username.(string), password.(string))
 
 		matches := client.GetMatchHistory()
+		fmt.Printf("\nCurrent Elo: %d\n", Cyan(matches[0].TotalElo()))
 		fmt.Println("Date\t\tMap\tElo Change")
 		for _, match := range matches {
 			prettyPrintMatch(match)

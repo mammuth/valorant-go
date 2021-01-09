@@ -15,6 +15,7 @@ type Match struct {
 	MapId                    string `json:"MapID"`
 	TierProgressBeforeUpdate int    `json:"TierProgressBeforeUpdate"`
 	TierProgressAfterUpdate  int    `json:"TierProgressAfterUpdate"`
+	TierAfterMatch           int    `json:"TierAfterUpdate"`
 }
 
 type matchHistoryResponse struct {
@@ -40,6 +41,10 @@ func (match *Match) StartTime() time.Time {
 
 func (match *Match) VerboseTime() string {
 	return humanize.Time(match.StartTime())
+}
+
+func (match *Match) TotalElo() int {
+	return (match.TierAfterMatch * 100) - 300 + match.TierProgressAfterUpdate
 }
 
 func (match *Match) VerboseEloChange() string {
