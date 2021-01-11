@@ -5,7 +5,7 @@ A Go API and CLI for the game Valorant
 
 This module includes two packages: 
 - A CLI in `cmd` 
-- An API wrapper in `pkg` 
+- A Valorant API wrapper in `pkg` 
 
 **Current status:** 
 - The API wrapper is very fundamental and lacks things like proper error handling. :construction:
